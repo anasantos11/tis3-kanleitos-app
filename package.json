@@ -1,15 +1,12 @@
 {
   "name": "kanleitos",
   "version": "1.0.0",
-  "description": "Software for management of an hospital",
+  "description": "Software para gestão de leitos e clínicas de hospitais",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
-    "kan",
-    "leitos",
-    "BLAW"
+    "kanleitos",
+    "gestao leitos",
+    "gestao clinicas"
   ],
   "author": "",
   "license": "ISC",
