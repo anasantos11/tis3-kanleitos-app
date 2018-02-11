@@ -1,7 +1,5 @@
-webApp/node_modules/*
-webApp/bower_components/*
-webApp/package-lock.json
-webApp/dist/*
+node_modules/*
+bower_components/*
+package-lock.json
+dist/*
 
-/.metadata/
-/.recommenders/
