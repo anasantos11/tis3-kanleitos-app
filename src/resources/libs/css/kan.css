@@ -1,6 +1,8 @@
+/**KAN LEITOS**/
+
 .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
-    padding-left: 8px !important;
-    padding-right: 8px !important;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 body {
@@ -9,15 +11,20 @@ body {
 }
 
 div.fixed-nav {
-    padding-top: 56px;
+    padding-top: 54px;
 }
 
 .content-wrapper {
-    padding-bottom: 30px;
-    min-height: calc(100vh - 56px);
+    padding-bottom: 1rem;
+    min-height: calc(100vh - 54px);
     padding-top: 1rem;
     overflow-x: hidden;
     background: #eaedef;
+}
+
+.container-fluid {
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
 
 @media (min-width: 992px) {
@@ -68,13 +75,12 @@ div.fixed-nav {
 
 .kan-row {
     background-color: #fcfcfc;
-    padding-top: 10px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding: .75rem 1rem;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    min-height: calc(100vh - 56px - 22px - 4.75em);
 }
 
 .jumbotron {
@@ -87,7 +93,8 @@ div.fixed-nav {
 
 .kan-group {
     float: left;
-    padding-bottom: 10px !important;
+    padding-bottom: 10px;
+    padding-left: 0px;
 }
 
 .kan-title {
@@ -172,8 +179,17 @@ table td {
 input[type=date]::-webkit-inner-spin-button, input[type=date]::-webkit-outer-spin-button, input[type="date"]::-webkit-clear-button {
     -webkit-appearance: none;
 }
+
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
+}
+
+.custom-radio .custom-control-input~.custom-control-indicator {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.custom-control-indicator {
+    background-color: #28ad9857;
 }
 
 /** NAVEGACAO - MENU **/
@@ -402,7 +418,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 
 @media (min-width: 992px) {
     #mainNav.fixed-top .navbar-sidenav {
-        height: calc(100vh - 108px);
+        height: calc(100vh - 54px);
     }
     #mainNav.fixed-top .sidenav-toggler {
         position: absolute;
@@ -414,7 +430,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
-        margin-top: calc(100vh - 56px);
+        margin-top: calc(100vh - 75px);
     }
     #mainNav.fixed-top .sidenav-toggler>.nav-item {
         width: 250px;
@@ -661,3 +677,5 @@ body.sidenav-toggled .navbar-sidenav .nav-item:after, body.sidenav-toggled .navb
 }
 
 /* FIM LOGIN */
+
+/**FIM KAN LEITOS**/
