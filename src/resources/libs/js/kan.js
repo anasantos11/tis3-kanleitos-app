@@ -1,3 +1,21 @@
+/**
+ * Adiciona e remove classes collapsed and sidenav-toggled
+ */
+$("#sidenavToggler").click(function (e) {
+    debugger;
+    e.preventDefault(),
+        $("body").toggleClass("sidenav-toggled"),
+        $(".navbar-sidenav .nav-link-collapse").addClass("collapsed"),
+        $(".navbar-sidenav .sidenav-second-level, .navbar-sidenav .sidenav-third-level").removeClass("show")
+});
+
+$(".navbar-sidenav .nav-link-collapse").click(function (e) {
+    debugger;
+    e.preventDefault(),
+        $("body").removeClass("sidenav-toggled")
+});
+
+
 ! function (a) {
     "use strict";
     /** 7

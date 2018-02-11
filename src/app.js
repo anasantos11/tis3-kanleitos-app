@@ -24,16 +24,38 @@ app.controller('KanController', ['$rootScope', '$scope', '$state', '$firebaseAut
 			$scope.nomeUsuario = user.displayName;
 			$scope.emailUsuario = user.email;
 			isLogado = true;
-			location.href = "#!/home";
+			$state.go('kanleitos');
 		}
 	});
+
+
+	/**
+	 * MENU - Adiciona e remove classes collapsed and sidenav-toggled
+	 */
+	$("#sidenavToggler").click(function (e) {
+		e.stopImmediatePropagation();
+		$("body").toggleClass("sidenav-toggled");
+		$(".navbar-sidenav .nav-link-collapse").addClass("collapsed");
+		$(".navbar-sidenav .sidenav-second-level, .navbar-sidenav .sidenav-third-level").removeClass("show");
+	});
+
+	$(".navbar-sidenav .nav-link-collapse").click(function (e) {
+		e.preventDefault();
+		$("body").removeClass("sidenav-toggled");
+	});
+
+	$("#sidenavResponsiveToggler").click(function (e) {
+		e.preventDefault();
+		$("body").removeClass("sidenav-toggled");
+	});
+
 
 	$scope.sairAplicacao = function () {
 		firebase.auth().signOut()
 			.then(function () {
-				$('#sairAppModal').modal('hide');
-				location.href = "#!/login";
+				$('#sairAppModal').modal('toggle');
 				isLogado = false;
+				$state.go('login');
 			}).catch(function (error) {
 				swal(
 					"Algum erro ocorreu, tente novamente!",
@@ -43,67 +65,9 @@ app.controller('KanController', ['$rootScope', '$scope', '$state', '$firebaseAut
 			});
 
 	};
+
 }]);
 
 
-app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
-	$urlRouterProvider.otherwise("/login");
 
-	$stateProvider.state("login", {
-		url: "/login",
-		templateUrl: "templates/login.html"
-	});
-
-	$stateProvider.state("home", {
-		url: "/home",
-		templateUrl: "templates/relatorios/kanban-leitos.html",
-	});
-
-	$stateProvider.state("emConstrucao", {
-		url: "/emConstrucao",
-		templateUrl: "templates/erro.html",
-	});
-
-	$stateProvider.state("cadastroPaciente", {
-		url: "/cadastroPaciente",
-		templateUrl: "templates/internacao/cadastroPaciente.html"
-	});
-
-	$stateProvider.state("pedidoInternacao", {
-		url: "/pedidoInternacao",
-		templateUrl: "templates/internacao/pedidoInternacao.html"
-	});
-
-	$stateProvider.state("registroInternacao", {
-		url: "/registroInternacao",
-		templateUrl: "templates/internacao/registroInternacao.html"
-	});
-
-	$stateProvider.state("leitos", {
-		url: "/leitos",
-		templateUrl: "templates/relatorios/leitos.html"
-	});
-
-	$stateProvider.state("relatorioPedidosEmAberto", {
-		url: "/relatorioPedidosEmAberto",
-		templateUrl: "templates/relatorios/pedidoInternacaoEmAberto.html"
-	});
-})
-
-app.run(['$rootScope', '$location',
-	function ($rootScope, $location) {
-
-		$rootScope.$on('$locationChangeStart', function (event, next, current) {
-			var rota = $location.path();
-			if (rota == '/login' || rota == '/' || rota == '') {
-				$rootScope.IsLogin = true;
-			} else if (rota != '/' && rota != '') {
-				$rootScope.IsLogin = false;
-				if (!isLogado) {
-					event.preventDefault();
-					location.href = "#!/login";
-				}
-			}
-		});
-	}]);
 
