@@ -1,3 +1,8 @@
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
@@ -62,10 +67,10 @@ div.fixed-nav {
 }
 
 .kan-row {
-    background-color: #fcfcfc !important;
-    padding-top: 20px !important;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
+    background-color: #fcfcfc;
+    padding-top: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -164,6 +169,12 @@ table td {
     padding-left: 0px !important;
 }
 
+input[type=date]::-webkit-inner-spin-button, input[type=date]::-webkit-outer-spin-button, input[type="date"]::-webkit-clear-button {
+    -webkit-appearance: none;
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
 
 /** NAVEGACAO - MENU **/
 
@@ -268,7 +279,7 @@ table td {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
-        margin-top: 56px;
+        margin-top: 54px;
     }
     #mainNav .navbar-collapse .navbar-sidenav>.nav-item {
         width: 250px;
@@ -391,7 +402,7 @@ table td {
 
 @media (min-width: 992px) {
     #mainNav.fixed-top .navbar-sidenav {
-        height: calc(100vh - 112px);
+        height: calc(100vh - 108px);
     }
     #mainNav.fixed-top .sidenav-toggler {
         position: absolute;
@@ -499,40 +510,40 @@ body.sidenav-toggled .navbar-sidenav .nav-item:after, body.sidenav-toggled .navb
 /** FIM NAVEGACAO - MENU**/
 
 /* LOGIN */
+
 .login-container {
     float: left;
     width: 100%;
     min-height: 100%;
-    background-color:#1b1e24;
-  }
-  
-  .login-container .login-box {
+    background-color: #1b1e24;
+}
+
+.login-container .login-box {
     width: 400px;
     margin: 0px auto;
     padding-top: 100px;
-  }
-  
-  @media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 768px) {
     .login-container {
-      padding: 30% 10px;
+        padding: 30% 10px;
     }
     .login-container .login-box {
-      padding-top: 10px;
-      width: 100%;
+        padding-top: 10px;
+        width: 100%;
     }
-  
-  }
-  
-   .login-container .login-box .login-logo {
-      background: url("../../img/LogoKanleitos.png") top center no-repeat;
-      background-size: 60%;
-      width: 100%;
-      height: 80px;
-      float: left;
-      margin-bottom: 10px;
-    }
-  
-  .login-container .login-box .login-body {
+}
+
+.login-container .login-box .login-logo {
+    background: url("../../img/LogoKanleitos.png") top center no-repeat;
+    background-size: 60%;
+    width: 100%;
+    height: 80px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.login-container .login-box .login-body {
     width: 100%;
     float: left;
     background: rgba(255, 255, 255, 0.1);
@@ -540,26 +551,30 @@ body.sidenav-toggled .navbar-sidenav .nav-item:after, body.sidenav-toggled .navb
     -moz-border-radius: 0px;
     -webkit-border-radius: 0px;
     border-radius: 0px;
-  }
-  .login-container .login-box .login-body .login-title {
+}
+
+.login-container .login-box .login-body .login-title {
     color: #FFF;
     font-size: 19px;
     font-weight: 300;
     margin-bottom: 20px;
-  }
-  .login-container .login-box .login-body .form-control {
+}
+
+.login-container .login-box .login-body .form-control {
     border: 0px;
     background: rgba(0, 0, 0, 0.2);
     padding: 10px 15px;
     color: #CCC;
     line-height: 20px;
     height: auto;
-  }
-  .login-container .login-box .login-body .btn-link {
+}
+
+.login-container .login-box .login-body .btn-link {
     color: #FFF;
     border: 0px;
-  }
-  .login-container .login-box .login-body .login-or {
+}
+
+.login-container .login-box .login-body .login-or {
     width: 40px;
     height: 25px;
     background: rgba(0, 0, 0, 0.2);
@@ -568,8 +583,9 @@ body.sidenav-toggled .navbar-sidenav .nav-item:after, body.sidenav-toggled .navb
     text-align: center;
     line-height: 25px;
     color: #FFF;
-  }
-  .login-container .login-box .login-body .login-or:before {
+}
+
+.login-container .login-box .login-body .login-or:before {
     content: "";
     position: absolute;
     left: 0;
@@ -579,8 +595,9 @@ body.sidenav-toggled .navbar-sidenav .nav-item:after, body.sidenav-toggled .navb
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-bottom: 10px solid rgba(0, 0, 0, 0.2);
-  }
-  .login-container .login-box .login-body .login-or:after {
+}
+
+.login-container .login-box .login-body .login-or:after {
     content: "";
     position: absolute;
     left: 0;
@@ -590,48 +607,57 @@ body.sidenav-toggled .navbar-sidenav .nav-item:after, body.sidenav-toggled .navb
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-top: 10px solid rgba(0, 0, 0, 0.2);
-  }
-  .login-container .login-box .login-body .login-subtitle {
+}
+
+.login-container .login-box .login-body .login-subtitle {
     line-height: 20px;
     padding: 5px 0px;
     font-size: 12px;
     color: #FFF;
-  }
-  .login-container .login-box .login-body .login-subtitle a {
+}
+
+.login-container .login-box .login-body .login-subtitle a {
     color: #1caf9a;
-  }
-  .login-container .login-box .login-footer {
+}
+
+.login-container .login-box .login-footer {
     width: 100%;
     float: left;
     padding: 10px;
     color: #FFF;
-  }
-  .login-container .login-box .login-footer a {
+}
+
+.login-container .login-box .login-footer a {
     color: #FFF;
-  }
-  .login-container.lightmode {
+}
+
+.login-container.lightmode {
     background: url("../img/backgrounds/wall_1.jpg") left top no-repeat;
-  }
-  .login-container.lightmode .login-box .login-body {
+}
+
+.login-container.lightmode .login-box .login-body {
     background: rgba(255, 255, 255, 0.2);
-  }
-  .login-container.lightmode .login-box .login-body .form-control {
+}
+
+.login-container.lightmode .login-box .login-body .form-control {
     background: rgba(255, 255, 255, 0.4);
     color: #333;
-  }
-  .login-container.lightmode .login-box .login-subtitle a {
+}
+
+.login-container.lightmode .login-box .login-subtitle a {
     color: #1b1e24;
-  }
-  
-  .login-form-group {
+}
+
+.login-form-group {
     position: relative;
     margin-bottom: 15px;
-  }
-  
-  .login-form-group .fa {
+}
+
+.login-form-group .fa {
     position: absolute;
     right: 12px;
     top: 5px;
     color: white;
-  }
-  /* FIM LOGIN */
+}
+
+/* FIM LOGIN */

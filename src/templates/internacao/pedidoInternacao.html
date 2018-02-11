@@ -7,66 +7,81 @@
             <span> Pedido de Internação</span>
         </li>
     </ol>
-    <div class="col-lg-12 col-sm-12 kan-row">
+    
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 kan-row">
         <!-- PACIENTE -->
-        <fieldset class="col-lg-6 col-sm-12 kan-group">
-            <h4 class="padding-bottom kan-title">Dados do Paciente
+        <fieldset class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 kan-group">
+            <h5 class=" kan-title">Dados do Paciente
                 <i class="fa fa-plus fa-1-x kan-icon" ng-click="openModalCadastro()" tooltip-side="bottom" tooltips tooltip-template="Cadastrar paciente"></i>
-                <i class="fa fa-search fa-1-x kan-icon" ng-click="openModalPesquisa()" tooltip-side="bottom" tooltips tooltip-template="Pesquisar paciente"> </i>
-            </h4>
-            <div class="col-lg-4 kan-group no-padding-left">
-                <label for="numProntuario">Prontuário<b class="text-danger">*</b></label>
-                <input class="form-control" type="number" placeholder="Digite o prontuário" ng-change="GetPaciente()" ng-model="pedidoInternacao.numProntuario">
+                <i class="fa fa-search fa-1-x kan-icon" ng-click="openModalPesquisa()" tooltip-side="bottom" tooltips tooltip-template="Pesquisar paciente">
+                </i>
+            </h5>
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-4 kan-group no-padding-left">
+                <label for="numProntuario">Prontuário
+                    <b class="text-danger">*</b>
+                </label>
+                <input class="form-control form-control-sm" type="number" placeholder="Informe o prontuário" ng-change="GetPaciente()" ng-model="pedidoInternacao.numProntuario">
             </div>
 
-            <div class="col-lg-8 kan-group no-padding-left ">
-                <label for="nomePaciente">Nome do Paciente<b class="text-danger">*</b></label>
-                <input disabled class="form-control" type="text" placeholder="Digite o nome do paciente" ng-model="pedidoInternacao.nomePaciente">
+            <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-8 kan-group no-padding-left ">
+                <label for="nomePaciente">Nome do Paciente
+                    <b class="text-danger">*</b>
+                </label>
+                <input disabled class="form-control form-control-sm" type="text" placeholder="Informe o nome do paciente" ng-model="pedidoInternacao.nomePaciente">
             </div>
 
-            <div class="col-lg-12 kan-group no-padding-left ">
-                <label for="nomeMae">Nome da Mãe <b class="text-danger">*</b> </label>
-                <input disabled class="form-control" type="text" placeholder="Digite o nome da mãe do paciente" ng-model="pedidoInternacao.nomeMae">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 kan-group no-padding-left ">
+                <label for="nomeMae">Nome da Mãe
+                    <b class="text-danger">*</b>
+                </label>
+                <input disabled class="form-control form-control-sm" type="text" placeholder="Informe o nome da mãe do paciente" ng-model="pedidoInternacao.nomeMae">
             </div>
 
-            <div class="col-lg-6 kan-group no-padding-left">
-                <label>Data de nascimento<b class="text-danger">*</b></label>
-                <input disabled class="form-control" type="date" ng-model="pedidoInternacao.dataNascimento" ng-change=" calcularIdade()"
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 kan-group no-padding-left">
+                <label>Data de nascimento
+                    <b class="text-danger">*</b>    
+                </label>
+                <input disabled class="form-control form-control-sm" type="date" ng-model="pedidoInternacao.dataNascimento" ng-change=" calcularIdade()"
                     value="">
             </div>
-            <div class="col-lg-6 kan-group no-padding-left">
-                <label for="idade">Idade<b class="text-danger">*</b></label>
-                <input disabled type="text" ng-model="pedidoInternacao.idade" class="form-control">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  kan-group no-padding-left">
+                <label for="idade">Idade
+                    <b class="text-danger">*</b>
+                </label>
+                <input disabled type="text" placeholder="Informe a idade" ng-model="pedidoInternacao.idade" class="form-control form-control-sm">
             </div>
-            <div class="col-lg-12 kan-group no-padding-left">
-                <label>Sexo</label><b class="text-danger">*</b>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12  kan-group no-padding-left">
+                <label>Sexo</label>
+                <b class="text-danger">*</b>
                 <span class="clearfix"></span>
                 <label class="custom-control custom-radio">
-                    <input disabled id="feminino" name="genero" type="radio" class="custom-control-input ml-4 ng-pristine ng-untouched ng-valid ng-empty" ng-model="pedidoInternacao.genero" ng-value="'Masculino'" value="Masculino">
+                    <input disabled id="feminino" name="genero" type="radio" class="custom-control-input ml-4 ng-pristine ng-untouched ng-valid ng-empty"
+                        ng-model="pedidoInternacao.genero" ng-value="'Masculino'" value="Masculino">
                     <span class="custom-control-indicator p-3"></span>
                     <span for="feminino" class="custom-control-description ml-4 mt-2">Masculino</span>
                 </label>
 
                 <label class="custom-control custom-radio">
-                    <input  disabled id="masculino" name="genero" type="radio" class="custom-control-input ml-4 ng-pristine ng-untouched ng-valid ng-empty" ng-model="pedidoInternacao.genero" ng-value="'Feminino'" value="Feminino">
+                    <input disabled id="masculino" name="genero" type="radio" class="custom-control-input ml-4 ng-pristine ng-untouched ng-valid ng-empty"
+                        ng-model="pedidoInternacao.genero" ng-value="'Feminino'" value="Feminino">
                     <span class="custom-control-indicator p-3"></span>
                     <span for="masculino" class="custom-control-description ml-4 mt-2">Feminino</span>
                 </label>
             </div>
         </fieldset>
         <!-- PEDIDO INTERNACAO -->
-        <fieldset class="col-lg-6 col-sm-12 kan-group ">
-            <h4 class="padding-bottom  kan-title">Pedido Internação
+        <fieldset class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 kan-group ">
+            <h5 class="  kan-title">Pedido Internação
                 <i class="fa fa-info fa-1-x kan-icon" tooltip-side="bottom" tooltips tooltip-template="Dados para solicitar a internação do paciente."></i>
-            </h4>
-            <div ng-hide="true" class="col-lg-12 kan-group no-padding-left">
+            </h5>
+            <div ng-hide="true" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 kan-group no-padding-left">
                 <label>Data do pedido </label>
-                <input class="form-control" type="date" ng-model="pedidoInternacao.dataPedido" ng-disabled="true">
+                <input class="form-control form-control-sm" type="date" ng-model="pedidoInternacao.dataPedido" ng-disabled="true">
             </div>
 
-            <div ng-hide="true" class="col-lg-12 kan-group no-padding-left">
+            <div ng-hide="true" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 kan-group no-padding-left">
                 <label for="Status">Status</label>
-                <select class="form-control" ng-model="pedidoInternacao.status" ng-disabled="true">
+                <select class="form-control form-control-sm" ng-model="pedidoInternacao.status" ng-disabled="true">
                     <option value="">Selecione </option>
                     <option value="Pendente">Pendente</option>
                     <option value="Em Andamento">Em Andamento</option>
@@ -74,39 +89,50 @@
                     <option value="Cancelado">Cancelado</option>
                 </select>
             </div>
-            <div class="col-lg-4 kan-group no-padding-left">
-                <label for="aih">AIH<b class="text-danger">*</b></label>
-                <input class="form-control" type="number" placeholder="Digite a AIH" ng-model="pedidoInternacao.AIH">
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-4 kan-group no-padding-left">
+                <label for="aih">AIH
+                    <b class="text-danger">*</b>
+                </label>
+                <input class="form-control form-control-sm" type="number" placeholder="Informe a AIH" ng-model="pedidoInternacao.AIH">
             </div>
-            <div class="col-lg-8 kan-group no-padding-left">
-                <label>Diagnóstico<b class="text-danger">*</b></label>
-                <select class="form-control" ng-model="pedidoInternacao.idDiagnostico">
-                    <option value="">Selecione </option>
+            <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-8 kan-group no-padding-left">
+                <label>Ala
+                    <b class="text-danger">*</b>
+                </label>
+                <select ng-model="pedidoInternacao.idAla" class="form-control form-control-sm">
+                    <option value="">Selecione a Ala</option>
+                    <option ng-repeat="ala in Alas" value="{{ala.idAla}}">{{ala.nomeAla}}</option>
+                </select>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 kan-group no-padding-left">
+                <label>Diagnóstico
+                    <b class="text-danger">*</b>
+                </label>
+                <select class="form-control form-control-sm" ng-model="pedidoInternacao.idDiagnostico">
+                    <option value="">Selecione o diagnóstico </option>
                     <option ng-repeat="diagnostico in Diagnosticos" value="{{diagnostico.idDiagnostico}}">{{diagnostico.descricaoDiagnostico}}</option>
                 </select>
             </div>
-            <div class="col-lg-8 kan-group no-padding-left">
-                <label>Ala<b class="text-danger">*</b></label>
-                <select ng-model="pedidoInternacao.idAla" class="form-control">
-                    <option value="">Selecione</option>
-                    <option ng-repeat="ala in Alas" value="{{ala.idAla}}">{{ala.nomeAla}}</option>
-                </select>
-
+            <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 kan-group no-padding-left">
+                <label>Data de admissão
+                    <b class="text-danger">*</b>
+                </label>
+                <input class="form-control form-control-sm" type="date" ng-model="pedidoInternacao.dataAdmissao">
             </div>
-            <div class="col-lg-4 kan-group no-padding-left">
-                <label>Data de admissão<b class="text-danger">*</b></label>
-                <input class="form-control" type="date" ng-model="pedidoInternacao.dataAdmissao">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 kan-group no-padding-left">
+                <label>Médico Responsável
+                    <b class="text-danger">*</b>
+                </label>
+                <input type="text" class="form-control form-control-sm" placeholder="Informe o nome do médico responsável" ng-model="pedidoInternacao.medicoResponsavel">
             </div>
-            <div class="col-lg-12 kan-group no-padding-left">
-                <label>Médico Responsável<b class="text-danger">*</b></label>
-                <input type="text" class="form-control" placeholder="Digite o nome do médico responsável" ng-model="pedidoInternacao.medicoResponsavel">
-            </div>
-            <div class="col-lg-12 kan-group no-padding-left">
-                <label>Residente Responsável<b class="text-danger">*</b></label>
-                <input type="text" class="form-control" placeholder="Digite o nome do residente responsável" ng-model="pedidoInternacao.residenteResponsavel">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 kan-group no-padding-left">
+                <label>Residente Responsável
+                    <b class="text-danger">*</b>
+                </label>
+                <input type="text" class="form-control form-control-sm" placeholder="Informe o nome do residente responsável" ng-model="pedidoInternacao.residenteResponsavel">
             </div>
 
-            <div class="col-lg-12 kan-group no-padding-left text-right">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 no-padding-left text-right">
                 <button class="btn btn-kan" ng-click="salvarPedidoInternacao()">Solicitar Internação </button>
             </div>
         </fieldset>

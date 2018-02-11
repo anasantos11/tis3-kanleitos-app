@@ -3,11 +3,11 @@ app.controller('pedidoInternacaoController', ["$scope", "$rootScope", "$http", "
 
         $scope.novoPedidoInternacao = function () {
             $scope.pedidoInternacao = {
-                numProntuario: 0,
+                numProntuario: "",
                 nomePaciente: "",
                 nomeMae: "",
                 dataNascimento: "",
-                idade: 0,
+                idade: "",
                 genero: null,
                 AIH: "",
                 dataPedido: new Date(),
