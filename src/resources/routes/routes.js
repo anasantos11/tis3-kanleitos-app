@@ -7,15 +7,15 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 			views: {
 				'app@': {
 					templateUrl: 'templates/home.html',
-					controller: 'KanController'
+					controller: 'MainController'
 				},
 				'contentApp@kanleitos': {
 					templateUrl: 'templates/relatorios/kanban-leitos.html',
-					controller: 'KanController'
+					controller: 'MainController'
 				},
 				'menuKan@kanleitos': {
 					templateUrl: 'templates/menu.html',
-					controller: 'KanController'
+					controller: 'MainController'
 				}
 			}
 		})
