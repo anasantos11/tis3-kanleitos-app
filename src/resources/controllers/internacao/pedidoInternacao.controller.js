@@ -22,7 +22,7 @@ app.controller('pedidoInternacaoController', ["$scope", "$rootScope", "$http", "
 
 
         $scope.openModalCadastro = () => {
-            return Notify.openModal("templates/internacao/cadastroPaciente.html", null, "60%")
+            return Notify.openModal("templates/internacao/cadastroPaciente.html", null, "50%")
                 .closePromise.then((pacienteCadastrado) => {
                     if (!pacienteCadastrado.value || pacienteCadastrado.value === '$document' || pacienteCadastrado.value === '$closeButton') {
                         return

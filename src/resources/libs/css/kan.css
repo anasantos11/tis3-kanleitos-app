@@ -82,6 +82,12 @@ div.fixed-nav {
     min-height: calc(100vh - 56px - 22px - 4.75em);
 }
 
+.kan-row-modal {
+    background-color: #fcfcfc;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .jumbotron {
     background-color: #fcfcfc !important;
 }
