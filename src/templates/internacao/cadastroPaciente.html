@@ -7,26 +7,26 @@
             </h5>
             <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 kan-group">
                 <label for="numProntuario">Prontuário<b class="text-danger">*</b></label>
-                <input class="form-control" type="number" placeholder="Informe o prontuário" ng-model="paciente.numProntuario">
+                <input class="form-control form-control-sm" type="number" placeholder="Informe o prontuário" ng-model="paciente.numProntuario">
             </div>
 
             <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 kan-group">
                 <label for="nomePaciente">Nome do Paciente<b class="text-danger">*</b></label>
-                <input class="form-control" type="text" placeholder="Informe o nome do paciente" ng-model="paciente.nomePaciente">
+                <input class="form-control form-control-sm" type="text" placeholder="Informe o nome do paciente" ng-model="paciente.nomePaciente">
             </div>
 
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 kan-group">
                 <label for="nomeMae">Nome da Mãe <b class="text-danger">*</b> </label>
-                <input class="form-control" type="text" placeholder="Informe o nome da mãe do paciente" ng-model="paciente.nomeMae">
+                <input class="form-control form-control-sm" type="text" placeholder="Informe o nome da mãe do paciente" ng-model="paciente.nomeMae">
             </div>
 
             <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 kan-group">
                 <label>Data de nascimento<b class="text-danger">*</b></label>
-                <input class="form-control" type="date" ng-model="paciente.dataNascimento" ng-change=" calcularIdade()" value="">
+                <input class="form-control form-control-sm" type="date" ng-model="paciente.dataNascimento" ng-change=" calcularIdade()" value="">
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 kan-group">
                 <label for="idade">Idade<b class="text-danger">*</b></label>
-                <input disabled type="text" ng-model="paciente.idade" class="form-control">
+                <input disabled type="text" ng-model="paciente.idade" class="form-control form-control-sm">
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 kan-group">
                 <label>Sexo</label><b class="text-danger">*</b>
@@ -46,7 +46,7 @@
         </fieldset>
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 button-kan-row">
             <button type="button" class="btn btn-danger" ng-click="closeThisDialog(false)">Cancelar</button>
-            <button type="button" class="btn btn-kan" ng-click="cadastrarPaciente()">Cadastrar</button>
+            <button type="button" class="btn btn-kan" ng-click="cadastrarPaciente()">Cadastrar Paciente</button>
         </div>
     </div>
 </div>
