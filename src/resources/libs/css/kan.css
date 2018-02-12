@@ -7,7 +7,6 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
 }
 
 div.fixed-nav {
@@ -36,7 +35,7 @@ div.fixed-nav {
     }
 }
 
-.form-control:disabled, .form-control[readonly] {
+.form-control:disabled, .form-control[readonly], .custom-control-input:disabled, {
     background-color: #e5e5e5;
 }
 
@@ -101,15 +100,19 @@ div.fixed-nav {
     color: #000000;
 }
 
-.kan-icon {
+.kan-icon-success, .kan-icon-info {
     color: #28ad98;
     padding-left: 10px;
+}
+
+.btn, .kan-icon, .kan-icon-success {
+    cursor: pointer;
 }
 
 .btn-kan {
     color: #fff;
     background-color: #28ad98;
-    border-color: #28ad98;
+    border-color: #28ad98;  
 }
 
 tooltip tip-tip {
@@ -188,8 +191,30 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E");
 }
 
+.custom-control {
+    margin-right: 0.25rem;
+    padding-left: 0.55rem;
+}
+
 .custom-control-indicator {
     background-color: #28ad9857;
+    top: 0px;
+}
+
+label {
+    margin-bottom: 0px;
+}
+
+.button-kan-row {
+    margin-top: auto;
+    text-align: right;
+}
+
+.kan-tooltip {
+    background: rgb(8, 8, 8);
+    max-width: 500px;
+    min-width: 200px;
+    width: auto;
 }
 
 /** NAVEGACAO - MENU **/

@@ -26,6 +26,12 @@ app.controller('MainController', ['$rootScope', '$scope', '$state', '$firebaseAu
 
     };
 
+    $scope.$on('$viewContentLoaded', function () {
+        $('.kan-group [data-toggle="tooltip"]').tooltip({
+            template: '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner kan-tooltip"></div></div>'
+        });
+    });
+
     /**
      * MENU - Adiciona e remove classes collapsed and sidenav-toggled
      */

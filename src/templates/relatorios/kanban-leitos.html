@@ -19,11 +19,11 @@
             <div class="card-footer text-white clearfix small">
               <span class="float-left">Ver pacientes</span>
               <div class="float-right">
-                <button tooltips tooltip-side="left" tooltip-template="Pressione!" ng-if="canOpenModal" class="kan-btn-circle btn-dark" ng-click="openModalPaciente(kanban.Verde.pacientes)">
-                    <i class="fa fa-eye"></i>
+                <button tooltips tooltip-side="right" tooltip-template="Pressione para visualizar os pacientes internados nessa classificação!" ng-if="canOpenModal" class="kan-btn-circle btn-dark" ng-click="openModalPaciente(kanban.Verde.pacientes)">
+                    <i class="fa fa-eye kan-icon"></i>
                 </button>
 
-                <button tooltips tooltip-side="left" tooltip-template="Atualização em andamento" ng-disabled="true" ng-if="!canOpenModal" class="kan-btn-circle btn-dark">
+                <button tooltips tooltip-side="right" tooltip-template="Atualização em andamento" ng-disabled="true" ng-if="!canOpenModal" class="kan-btn-circle btn-dark">
                     <i class="fa fa-refresh rotate"></i>
                 </button>
               </div>
@@ -41,11 +41,11 @@
             <div class="card-footer text-white clearfix small" href="#">
                 <span class="float-left">Ver pacientes</span>
                 <div class="float-right">
-                    <button tooltips tooltip-side="left" tooltip-template="Pressione!" ng-if="canOpenModal" class="float-right kan-btn-circle btn-dark" ng-click="openModalPaciente(kanban.Amarelo.pacientes)">
-                        <i class="fa fa-eye"></i>
+                    <button tooltips tooltip-side="right" tooltip-template="Pressione para visualizar os pacientes internados nessa classificação!" ng-if="canOpenModal" class="float-right kan-btn-circle btn-dark" ng-click="openModalPaciente(kanban.Amarelo.pacientes)">
+                        <i class="fa fa-eye kan-icon"></i>
                     </button>
 
-                    <button tooltips tooltip-side="left" tooltip-template="Atualização em andamento" ng-disabled="true" ng-if="!canOpenModal" class="float-right kan-btn-circle btn-dark">
+                    <button tooltips tooltip-side="right" tooltip-template="Atualização em andamento" ng-disabled="true" ng-if="!canOpenModal" class="float-right kan-btn-circle btn-dark">
                         <i class="fa fa-refresh rotate"></i>
                     </button>
                 </div>
@@ -63,11 +63,11 @@
             <div class="card-footer text-white clearfix small" href="#">
                 <span class="float-left">Ver pacientes</span>
                 <div class="float-right">
-                    <button tooltips tooltip-side="left" tooltip-template="Pressione!" ng-if="canOpenModal" class="float-right kan-btn-circle btn-dark" ng-click="openModalPaciente(kanban.Vermelho.pacientes)">
-                        <i class="fa fa-eye"></i>
+                    <button tooltips tooltip-side="right" tooltip-template="Pressione para visualizar os pacientes internados nessa classificação!" ng-if="canOpenModal" class="float-right kan-btn-circle btn-dark" ng-click="openModalPaciente(kanban.Vermelho.pacientes)">
+                        <i class="fa fa-eye kan-icon"></i>
                     </button>
 
-                    <button tooltips tooltip-side="left" tooltip-template="Atualização em andamento" ng-disabled="true" ng-if="!canOpenModal" class="float-right kan-btn-circle btn-dark">
+                    <button tooltips tooltip-side="right" tooltip-template="Atualização em andamento" ng-disabled="true" ng-if="!canOpenModal" class="float-right kan-btn-circle btn-dark">
                         <i class="fa fa-refresh rotate"></i>
                     </button>
                 </div>
@@ -77,7 +77,7 @@
 
     <div class="col-xl-3 col-sm-6 mb-3 text-right">
         <button class="btn btn-outline-info" ng-click="getAllInternacoes()">
-            <i class="fa fa-refresh" ng-class="{'rotate' : !canOpenModal}"></i>
+            <i class="fa fa-refresh" tooltips tooltip-side="left" tooltip-template="Pressione para atualizar os registros de internações do bloco" ng-class="{'rotate' : !canOpenModal}"></i>
         </button>
     </div>
 </div>
