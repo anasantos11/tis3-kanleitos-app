@@ -68,6 +68,7 @@ div.fixed-nav {
     height: 1.57rem;
     border-radius: 1rem;
     font-size: 13px;
+    padding: unset;
 }
 
 .kan-custom, .custom-control-input:checked~.custom-control-indicator {
