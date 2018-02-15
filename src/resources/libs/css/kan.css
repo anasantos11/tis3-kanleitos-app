@@ -64,8 +64,16 @@ div.fixed-nav {
     transform: rotate(15deg);
 }
 
-#kan-logo {
-    width: 30%;
+#kan-logo{
+    width: 140px;
+    height:30px;
+}
+
+@media (min-width: 992px) {
+    #kan-logo{
+        width: 200px;
+        height: 40px;
+    }
 }
 
 .kan-height-card {
@@ -354,6 +362,7 @@ fieldset.kan-group {
 @media (min-width: 992px) {
     #mainNav .navbar-brand {
         width: 250px;
+        padding: 0px;
     }
     #mainNav .navbar-collapse {
         overflow: visible;
@@ -594,6 +603,10 @@ body.sidenav-toggled .navbar-sidenav .nav-item, body.sidenav-toggled .navbar-sid
 
 body.sidenav-toggled .navbar-sidenav .nav-item:after, body.sidenav-toggled .navbar-sidenav .nav-link:after {
     display: none;
+}
+
+button:focus, span:focus{
+    outline-color: #80bdff;
 }
 
 /** FIM NAVEGACAO - MENU**/
