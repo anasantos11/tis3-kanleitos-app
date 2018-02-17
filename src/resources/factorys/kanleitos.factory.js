@@ -3,14 +3,12 @@ var DEV = "https://dev-kanleitos-service.azurewebsites.net/";
 var HJK = "https://kanleitoshjk-service.azurewebsites.net/";
 
 
-URL_REQ = DEV;
-/*var URL_REQ = "http://localhost:9090/";
+var URL_REQ = DEV;
+//var URL_REQ = "http://localhost:9090/";
 
-if (local == "dev-kanleitos.azurewebsites.net") {
-    URL_REQ = DEV;
-} else if (local == "kanleitoshjk.azurewebsites.net") {
+if (local == "kanleitoshjk.azurewebsites.net") 
     URL_REQ = HJK;
-}*/
+
 
 var kanHeaders = {
     headers: {
