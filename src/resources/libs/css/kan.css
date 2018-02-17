@@ -10,11 +10,6 @@
     color: #212529;
 }
 
-body, table, .btn {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #212529;
-}
-
 thead {
     background-color: #dadada;
 }
@@ -23,13 +18,25 @@ tbody {
     font-size: 14px;
 }
 
-div.fixed-nav {
-    padding-top: 54px;
+@media (min-width: 992px) {
+    ul#sideNavResponsive {
+        height: calc(100vh - 50px);
+    }
+}
+
+.navbar-toggler:focus {
+    outline: 0px auto -webkit-focus-ring-color;
+}
+
+.bg-kan {
+    background: linear-gradient(90deg, #318be3, #04befe);
+    /*background: linear-gradient(90deg, #0AA497, #27D7B7);
+    background: linear-gradient(90deg, #1E9DE4, #1FDBEE, #27D7B7);*/
 }
 
 .content-wrapper {
     padding-bottom: 1rem;
-    min-height: calc(100vh - 54px);
+    min-height: calc(100vh - 50px);
     padding-top: 1rem;
     overflow-x: hidden;
     background: #eaedef;
@@ -64,18 +71,6 @@ div.fixed-nav {
     transform: rotate(15deg);
 }
 
-#kan-logo{
-    width: 140px;
-    height:30px;
-}
-
-@media (min-width: 992px) {
-    #kan-logo{
-        width: 200px;
-        height: 40px;
-    }
-}
-
 .kan-height-card {
     height: 150px;
 }
@@ -101,7 +96,7 @@ div.fixed-nav {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    min-height: calc(100vh - 56px - 22px - 4.75em);
+    min-height: calc(100vh - 50px - 29px - 4.5em)
 }
 
 .kan-row-modal {
@@ -273,26 +268,72 @@ fieldset.kan-group {
     padding: 0px;
 }
 
-/** NAVEGACAO - MENU **/
+/** NOVA NAVEGACAO - MENU **/
 
-#mainNav .navbar-collapse {
-    overflow: auto;
-    max-height: 75vh;
+/* TAMANHO LOGO KANLEITOS*/
+
+#kan-logo {
+    width: 165px;
+    height: 30px;
 }
 
-#mainNav .navbar-collapse .navbar-nav .nav-item .nav-link {
+.sidebarLogoMini #kan-logo {
+    width: 35px;
+    height: 30px;
+}
+
+/*TAMANHO SUBITENS NAV SUPERIOR */
+
+.navbar-brand-wrapper {
+    width: 250px;
+}
+
+.navbar .navbar-menu-wrapper {
+    padding: 1px 1rem;
+    width: calc(100% - 250px);
+}
+
+.kan-brand {
+    display: inline-block;
+    padding-top: .625rem;
+    padding-bottom: .625rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+/*DEFINE ONDE COMECA A PAGINA COM OS CONTEUDOS*/
+
+div.fixed-nav {
+    padding-top: 50px;
+}
+
+/*ALTERADO CURSOR PARA TODOS LINKS DO MENU LATERAL */
+
+.nav-link {
     cursor: pointer;
 }
 
-#mainNav .navbar-collapse .navbar-sidenav .nav-link-collapse:after {
+/*RETIRA PADDING DO NAV SUPERIOR*/
+
+.navbar {
+    padding: unset;
+}
+
+/*ICONE SUBITENS MENU ABERTO*/
+
+.nav-link-collapse:after {
     float: right;
     content: '\f107';
     font-family: 'FontAwesome';
 }
 
-#mainNav .navbar-collapse .navbar-sidenav .nav-link-collapse.collapsed:after {
+/*ICONE SUBITENS MENU FECHADO*/
+
+.nav-link-collapse.collapsed:after {
     content: '\f105';
 }
+
+/** SEGUNDO E TERCEIRO NIVEL DO SUBMENU */
 
 #mainNav .navbar-collapse .navbar-sidenav .sidenav-second-level, #mainNav .navbar-collapse .navbar-sidenav .sidenav-third-level {
     padding-left: 0;
@@ -314,6 +355,99 @@ fieldset.kan-group {
 #mainNav .navbar-collapse .navbar-sidenav .sidenav-third-level>li>a {
     padding-left: 2em;
 }
+
+/** ALTERA TAMANHO DA BARRA LATERAL APOS PEDIR PARA "FECHAR"**/
+
+body.sidenav-toggled .navbar-sidenav {
+    overflow-x: hidden;
+    width: 48px;
+}
+
+body.sidenav-toggled .navbar-sidenav .nav-link-text {
+    display: none;
+}
+
+body.sidenav-toggled .navbar-sidenav .nav-item, body.sidenav-toggled .navbar-sidenav .nav-link {
+    width: 55px !important;
+}
+
+body.sidenav-toggled .navbar-sidenav .nav-item:after, body.sidenav-toggled .navbar-sidenav .nav-link:after {
+    display: none;
+}
+
+/*CSS PARA DISPOSITIVOS COM LARGURA MAIOR QUE 992PX */
+
+@media (min-width: 992px) {
+    /*DEFINE COMEÇO DO MENU LATERAL */
+    .navbar-sidenav {
+        margin-top: 50px;
+    }
+    /** OCULTA LINK SAIR NO NAV SUPERIOR **/
+    #sidebarLinkSair {
+        display: none;
+    }
+    /*BARRA MENU LATERAL*/
+    #mainNav .navbar-collapse .navbar-sidenav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    /** DEDETERMINA A LARGURA DOS ITENS DO MENU **/
+    #mainNav .navbar-collapse .navbar-sidenav>.nav-item {
+        width: 250px;
+        padding: 0;
+    }
+    /** DETERMINA QUAL LOGO DEVE APARECE E CONFIGURA TAMANHO DA BARRA SUPERIOR DE ACORDO COM A LOGO **/
+    .sidebarLogoMini {
+        display: none;
+    }
+    body.sidenav-toggled .sidebarLogo {
+        display: none;
+    }
+    body.sidenav-toggled .sidebarLogoMini {
+        display: inline-block;
+    }
+    body.sidenav-toggled .navbar-brand-wrapper {
+        width: 55px;
+    }
+    body.sidenav-toggled .navbar .navbar-menu-wrapper {
+        padding: 1px 1rem;
+        width: calc(100% - 55px);
+    }
+}
+
+/*CSS PARA DISPOSITIVOS COM LARGURA MENOR QUE 992PX */
+
+@media (max-width: 992px) {
+    /** OCULTA BOTAO QUE ABRE MENU LATERAL **/
+    #sidenavToggler {
+        display: none;
+    }
+    /** OCULTA LINK SAIR NO NAV SUPERIOR **/
+    #navbarLinkSair {
+        display: none;
+    }
+    /**OCULTA LOGO TAMANHO MAIOR**/
+    .sidebarLogo {
+        display: none;
+    }
+    .navbar-brand-wrapper {
+        width: 55px;
+    }
+    .navbar .navbar-menu-wrapper {
+        padding: 1px 1rem;
+        width: calc(100% - 55px);
+    }
+}
+
+/** FIM NOVA NAVEGACAO - MENU **/
+
+/** NAVEGACAO - MENU **/
 
 #mainNav .navbar-collapse .sidenav-toggler {
     display: none;
@@ -360,28 +494,9 @@ fieldset.kan-group {
 }
 
 @media (min-width: 992px) {
-    #mainNav .navbar-brand {
-        width: 250px;
-        padding: 0px;
-    }
     #mainNav .navbar-collapse {
         overflow: visible;
         max-height: none;
-    }
-    #mainNav .navbar-collapse .navbar-sidenav {
-        position: absolute;
-        top: 0;
-        left: 0;
-        overflow-x: hidden;
-        overflow-y: auto;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        margin-top: 54px;
-    }
-    #mainNav .navbar-collapse .navbar-sidenav>.nav-item {
-        width: 250px;
-        padding: 0;
     }
     #mainNav .navbar-collapse .navbar-sidenav>.nav-item>.nav-link {
         padding: 1em;
@@ -500,7 +615,7 @@ fieldset.kan-group {
 
 @media (min-width: 992px) {
     #mainNav.fixed-top .navbar-sidenav {
-        height: calc(100vh - 54px);
+        height: calc(100vh - 50px);
     }
     #mainNav.fixed-top .sidenav-toggler {
         position: absolute;
@@ -578,35 +693,6 @@ body.sidenav-toggled #mainNav.static-top #sidenavToggler i {
 
 .navbar-sidenav-tooltip.show {
     display: none;
-}
-
-body.sidenav-toggled .navbar-sidenav-tooltip.show {
-    display: flex;
-}
-
-#sidenavToggler i {
-    font-weight: 800;
-}
-
-body.sidenav-toggled .navbar-sidenav {
-    overflow-x: hidden;
-    width: 55px;
-}
-
-body.sidenav-toggled .navbar-sidenav .nav-link-text {
-    display: none;
-}
-
-body.sidenav-toggled .navbar-sidenav .nav-item, body.sidenav-toggled .navbar-sidenav .nav-link {
-    width: 55px !important;
-}
-
-body.sidenav-toggled .navbar-sidenav .nav-item:after, body.sidenav-toggled .navbar-sidenav .nav-link:after {
-    display: none;
-}
-
-button:focus, span:focus{
-    outline-color: #80bdff;
 }
 
 /** FIM NAVEGACAO - MENU**/

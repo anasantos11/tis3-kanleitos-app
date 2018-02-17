@@ -1,77 +1,86 @@
-<!-- MENU NAV -->
-<div  class="fixed-nav">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-        <a class="navbar-brand" ui-sref="kanleitos">
-            <img id="kan-logo"src="img/LogoKanleitos.png" class="d-inline-block align-top" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" 
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav navbar-sidenav" id="sideNavResponsive">
-                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Internação">
-                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" data-target="#collapseInternacao" data-parent="#sideNavResponsive">
-                        <i class="fa fa-plus-square fa-lg"></i>
-                        <span class="nav-link-text">
-                            Internação</span>
-                    </a>
-                    <ul class="sidenav-second-level collapse" id="collapseInternacao">
-                        <li>
-                            <a class="nav-link-text" ui-sref="pedidoInternacao">
-                                <i class="fa fa-user-plus" aria-hidden="true"></i>
-                                <span class="nav-link-text">
-                                    Pedido Internação</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a ui-sref="registroInternacao">
-                                <i class="fa fa-plus-circle fa-lg" aria-hidden="true"></i>
-                                <span class="nav-link-text">
-                                    Registrar Internação</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Relatórios">
-                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" data-target="#collapseRelatorios" data-parent="#sideNavResponsive">
-                        <i class="fa fa-file-text fa-lg"></i>
-                        <span class="nav-link-text">
-                            Relatórios</span>
-                    </a>
-                    <ul class="sidenav-second-level collapse" id="collapseRelatorios">
-                        <li>
-                            <a class="nav-link-text" ui-sref="leitos">
-                                <i class="fa fa-bed" aria-hidden="true"></i>
-                                <span class="nav-link-text">
-                                    Leitos</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="nav-link-text" ui-sref="relatorioPedidosEmAberto">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                <span class="nav-link-text">
-                                    Pedidos de Internação Abertos</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="navbar-nav sidenav-toggler">
+<div class="fixed-nav">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-kan fixed-top" id="mainNav">
+        <div class="bg-white text-center navbar-brand-wrapper">
+            <a class="kan-brand sidebarLogo" ui-sref="kanleitos">
+                <img id="kan-logo" src="img/logo-black.png">
+            </a>
+            <a class="kan-brand sidebarLogoMini" ui-sref="kanleitos">
+                <img id="kan-logo" src="img/logo-black-mini.png">
+            </a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center">
+            <button class="navbar-toggler d-lg-block border-0 p-0" id="sidenavToggler" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <button class="navbar-toggler ml-auto border-0" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="navbar-nav ml-auto" id="navbarLinkSair">
                 <li class="nav-item">
-                    <a class="nav-link text-center" id="sidenavToggler">
-                        <i class="fa fa-fw fa-angle-left"></i>
-                    </a>
+                    <a class="nav-link" data-toggle="modal" data-target="#sairAppModal">
+                        <i class="fa fa-fw fa-sign-out"></i>
+                        Sair</a>
                 </li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown">
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="modal" data-target="#sairAppModal">
-                            <i class="fa fa-fw fa-sign-out"></i>
-                            Sair</a>
-                    </li>
             </ul>
         </div>
     </nav>
 </div>
+<!-- MENU NAV-->
+<nav class="sidebar navbar-expand-lg navbar-white bg-white" id="mainNav">
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav" id="sideNavResponsive">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Internação">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" data-target="#collapseInternacao" data-parent="#sideNavResponsive">
+                    <i class="fa fa-plus-square fa-lg"></i>
+                    <span class="nav-link-text">
+                        Internação</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseInternacao">
+                    <li>
+                        <a class="nav-link-text" ui-sref="pedidoInternacao">
+                            <i class="fa fa-user-plus" aria-hidden="true"></i>
+                            <span class="nav-link-text">
+                                Pedido Internação</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a ui-sref="registroInternacao">
+                            <i class="fa fa-plus-circle fa-lg" aria-hidden="true"></i>
+                            <span class="nav-link-text">
+                                Registrar Internação</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Relatórios">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" data-target="#collapseRelatorios" data-parent="#sideNavResponsive">
+                    <i class="fa fa-file-text fa-lg"></i>
+                    <span class="nav-link-text">
+                        Relatórios</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseRelatorios">
+                    <li>
+                        <a class="nav-link-text" ui-sref="leitos">
+                            <i class="fa fa-bed" aria-hidden="true"></i>
+                            <span class="nav-link-text">
+                                Leitos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link-text" ui-sref="relatorioPedidosEmAberto">
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            <span class="nav-link-text">
+                                Pedidos de Internação Abertos</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" id="sidebarLinkSair">
+                <a class="nav-link" data-toggle="modal" data-target="#sairAppModal">
+                    <i class="fa fa-fw fa-sign-out"></i>
+                    Sair</a>
+            </li>
+        </ul>
+    </div>
+</nav>

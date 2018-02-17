@@ -26,6 +26,10 @@ app.controller('MainController', ['$rootScope', '$scope', '$state', '$firebaseAu
 
     };
 
+    /**
+     * Adiciona template aos tooltips da página conforme view modifica
+     */
+
     $scope.$on('$viewContentLoaded', function () {
         $('.kan-group [data-toggle="tooltip"]').tooltip({
             template: '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner kan-tooltip"></div></div>'
@@ -33,21 +37,19 @@ app.controller('MainController', ['$rootScope', '$scope', '$state', '$firebaseAu
     });
 
     /**
-     * MENU - Adiciona e remove classes collapsed and sidenav-toggled
+     * Fecha e expande o menu lateral ao clicar no botão no nav
      */
     $("#sidenavToggler").click(function (e) {
         e.stopImmediatePropagation();
         $("body").toggleClass("sidenav-toggled");
-        $(".navbar-sidenav .nav-link-collapse").addClass("collapsed");
-        $(".navbar-sidenav .sidenav-second-level, .navbar-sidenav .sidenav-third-level").removeClass("show");
+        $("#navbarResponsive").addClass("collapsed");
+        $("#sideNavResponsive .sidenav-second-level, #sideNavResponsive .sidenav-third-level").removeClass("show");
     });
 
-    $(".navbar-sidenav .nav-link-collapse").click(function (e) {
-        e.preventDefault();
-        $("body").removeClass("sidenav-toggled");
-    });
-
-    $("#sidenavResponsiveToggler").click(function (e) {
+    /**
+     * Expande lista do menu lateral quando o clica em algum item do menu que estava fechado
+     */
+    $("#sideNavResponsive .nav-link-collapse").click(function (e) {
         e.preventDefault();
         $("body").removeClass("sidenav-toggled");
     });
