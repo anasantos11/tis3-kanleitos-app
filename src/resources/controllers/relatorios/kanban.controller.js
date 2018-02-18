@@ -1,5 +1,5 @@
-app.controller('dashboardController', ["$scope" ,"$interval","kanbanFactory", "Notify",
-    function($scope, $interval, kanbanFactory, Notify){
+app.controller('dashboardController', ['$rootScope', '$scope', '$state', '$stateParams',"$interval","kanbanFactory", "Notify",
+    function($rootScope, $scope, $state,$stateParams, $interval, kanbanFactory, Notify){
 
         $scope.kanban = {
             Verde: {
@@ -19,10 +19,12 @@ app.controller('dashboardController', ["$scope" ,"$interval","kanbanFactory", "N
         $scope.canOpenModal = false
 
         const openModalPaciente = (pacientes) =>{
-            Notify.openModal("templates/relatorios/modal-kanban.html", {pacientes: pacientes}, "95%")
+            $state.go('classificacaoPacientes', {pacientes: pacientes});
+            //Notify.openModal("templates/relatorios/modal-kanban.html", {pacientes: pacientes}, "95%")
         }
 
         const atualizaRegistrosInternacao = () =>{
+            debugger;
             return kanbanFactory.atualizaRegistrosInternacao()
             .then(()=>{
                 return getAllInternacoes()
@@ -48,8 +50,8 @@ app.controller('dashboardController', ["$scope" ,"$interval","kanbanFactory", "N
         const getRegistrosPorClassificação = (classificacao) => {
             return kanbanFactory.getRegistrosPorClassificação(classificacao)
             .then((res)=>{
-                $scope.kanban[classificacao].qtdPacientes = res.data.length
-                $scope.kanban[classificacao].pacientes = res.data
+                $scope.kanban[classificacao].qtdPacientes = res.data.length;
+                $scope.kanban[classificacao].pacientes = res.data;
             }).catch((err)=>{
                 console.log(err)
             })

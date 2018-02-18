@@ -89,6 +89,23 @@ app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 				}
 			}
 
+		})
+		.state("classificacaoPacientes", {
+			parent: "kanleitos",
+			params: {
+				pacientes: [],
+			  },
+			url: "/classificacaoPacientes",
+			views: {
+				"contentApp@kanleitos": {
+					templateUrl: "templates/relatorios/modal-kanban.html",
+					controller: function ($scope, $stateParams) {
+						$scope.pacientes = $stateParams.pacientes;
+					}
+				}
+			}
+
+
 		});
 })
 

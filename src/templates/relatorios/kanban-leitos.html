@@ -7,7 +7,7 @@
             <span>Relatório internações</span>
         </li>
         <li class="text-right">
-            <button class="btn kan-btn-success kan-btn-sm" ng-click="getAllInternacoes()">
+            <button class="btn kan-btn-success kan-btn-sm" ng-click="atualizaRegistrosInternacao()">
                 <i class="fa fa-refresh" tooltips tooltip-side="left" tooltip-template="Pressione para atualizar os registros de internações do bloco"
                     ng-class="{'rotate' : !canOpenModal}"></i>
             </button>
@@ -35,7 +35,7 @@
                         <span class="float-left">Ver pacientes</span>
                         <div class="float-right">
                             <button data-toggle="tooltip" data-placement="right" title="Pressione para visualizar os pacientes internados nessa classificação!"
-                                ng-if="canOpenModal" class="kan-btn-circle btn-dark" ng-click="openModalPaciente(kanban.Verde.pacientes)">
+                                ng-if="canOpenModal" class="kan-btn-circle btn-dark" ui-sref="classificacaoPacientes({pacientes:kanban.Verde.pacientes})">
                                 <i class="fa fa-eye kan-icon"></i>
                             </button>
 
