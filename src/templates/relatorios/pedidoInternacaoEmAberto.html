@@ -52,7 +52,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr ng-repeat="pedido in listaPedidos  | filter : search | orderBy: 'dataAdmissao'" ng-class="{'table-danger' : pedido.tempo.dias >= 1,'table-warning' : pedido.tempo.dias < 1 && pedido.tempo.horas <= 12 && pedido.tempo.minutos <= 0, 'table-success' : pedido.tempo.dias < 1 && pedido.tempo.horas < 12 && pedido.tempo.minutos > 0 }">
+                        <tr ng-repeat="pedido in listaPedidos  | filter : search | orderBy: 'dataAdmissao'" 
+                            ng-class="{ 'table-success' : pedido.tempo.dias < 1 && pedido.tempo.horas < 12, 
+                                        'table-warning' : pedido.tempo.dias < 1 && pedido.tempo.horas >= 12,
+                                        'table-danger'  : pedido.tempo.dias >= 1 }">
                             <td title="{{pedido.ala.nomeAla}}">{{pedido.ala.nomeAla}}</td>
                             <td title="{{pedido.diagnostico.descricaoDiagnostico}}">{{pedido.diagnostico.descricaoDiagnostico}} </td>
                             <td class="text-center" title="{{pedido.paciente.numProntuario}}">{{pedido.paciente.numProntuario | limitTo: 10}}</td>
