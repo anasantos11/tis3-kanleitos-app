@@ -12,10 +12,11 @@
 
 thead {
     background-color: #dadada;
+    font-size: 14px;
 }
 
 tbody {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 @media (min-width: 992px) {

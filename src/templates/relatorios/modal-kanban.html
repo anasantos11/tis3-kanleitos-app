@@ -1,7 +1,7 @@
 <div>
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
-            <span>Relatório Internação</span>
+            <a ui-sref="kanleitos"> Relatório internações </a>
         </li>
         <li class="breadcrumb-item active">
             <span> Classificação {{pacientes[0].classificacao}} </span>
@@ -34,13 +34,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr ng-repeat="paciente in pacientes" ng-class="{'table-success': paciente.classificacao == 'VERDE'}">
+                        <tr ng-repeat="paciente in pacientes" ng-class="{'table-success' : paciente.classificacao === 'VERDE', 'table-danger' : paciente.classificacao === 'VERMELHO', 'table-warning' : paciente.classificacao === 'AMARELO'}">
                             <td title="{{paciente.pedidoInternacao.paciente.nomePaciente}}">{{paciente.pedidoInternacao.paciente.nomePaciente}}</td>
                             <td class="text-center" title="{{paciente.pedidoInternacao.paciente.idade}}">{{paciente.pedidoInternacao.paciente.idade}}</td>
                             <td title="{{paciente.pedidoInternacao.diagnostico.descricaoDiagnostico}}">{{paciente.pedidoInternacao.diagnostico.descricaoDiagnostico}}</td>
                             <td class="text-center">{{paciente.pedidoInternacao.dataAdmissao | date}}</td>
                             <td class="text-center">{{paciente.diasInternacao}}</td>
-                            <td class="text-center">{{getLocalDate(paciente.previsaoAlta)}}</td>
+                            <td class="text-center">{{paciente.previsaoAlta | date}}</td>
                             <td class="text-center" title="{{paciente.pedidoInternacao.ala.nomeAla}}">{{paciente.pedidoInternacao.ala.nomeAla}}</td>
                             <td class="text-center">{{paciente.enfermaria.nomeEnfermaria}}</td>
                             <td class="text-center">{{paciente.leito.nomeLeito}}</td>

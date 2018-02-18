@@ -18,15 +18,20 @@ app.controller('ModalPesquisaPedidoInternacaoController', ["$scope", "pedidoInte
             var hours = Math.floor(difference_ms % 24);
             var days = Math.floor(difference_ms / 24);
 
-            return days + ' dia(s) ' + hours + 'h ' + minutes + 'min';
+            var tempo = {
+                dias: days,
+                horas: hours,
+                minutos: minutes
+            };
 
+            return tempo;
 
         };
 
         $scope.atualizarHorasAguardando = function () {
             var dataAtual = new Date();
             for (var i = 0; i < $scope.listaPedidos.length; i++) {
-                $scope.listaPedidos[i].horasAguardando = $scope.calcularHorasAguardando(dataAtual, new Date($scope.listaPedidos[i].dataAdmissao))
+                $scope.listaPedidos[i].tempo = $scope.calcularHorasAguardando(dataAtual, new Date($scope.listaPedidos[i].dataAdmissao))
             };
         };
 
