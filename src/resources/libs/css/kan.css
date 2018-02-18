@@ -90,7 +90,7 @@ tbody {
 }
 
 .kan-row {
-    background-color: #fcfcfc;
+    background-color: #fff;
     padding: .75rem 1rem;
     display: -ms-flexbox;
     display: flex;
@@ -105,11 +105,11 @@ tbody {
 }
 
 .jumbotron {
-    background-color: #fcfcfc;
+    background-color: #fff;
 }
 
 .breadcrumb {
-    background-color: #fcfcfc;
+    background-color: #fff;
 }
 
 .breadcrumb button {
