@@ -49,7 +49,7 @@ tbody {
 
 @media (min-width: 992px) {
     .content-wrapper {
-        margin-left: 250px;
+        margin-left: 230px;
     }
     body.sidenav-toggled .content-wrapper {
         margin-left: 55px;
@@ -172,7 +172,7 @@ tbody {
 }
 
 span.nav-link-text {
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 .ngdialog.ngdialog-theme-default .ngdialog-content {
@@ -285,12 +285,12 @@ fieldset.kan-group {
 /*TAMANHO SUBITENS NAV SUPERIOR */
 
 .navbar-brand-wrapper {
-    width: 250px;
+    width: 230px;
 }
 
 .navbar .navbar-menu-wrapper {
     padding: 1px 1rem;
-    width: calc(100% - 250px);
+    width: calc(100% - 230px);
 }
 
 .kan-brand {
@@ -311,8 +311,12 @@ div.fixed-nav {
 
 .nav-link {
     cursor: pointer;
+    color: #636c72;
 }
-
+.nav-link:hover{
+    color: #1f2020;
+    font-weight: 500;
+}
 /*RETIRA PADDING DO NAV SUPERIOR*/
 
 .navbar {
@@ -399,7 +403,7 @@ body.sidenav-toggled .navbar-sidenav .nav-item:after, body.sidenav-toggled .navb
     }
     /** DEDETERMINA A LARGURA DOS ITENS DO MENU **/
     #mainNav .navbar-collapse .navbar-sidenav>.nav-item {
-        width: 250px;
+        width: 230px;
         padding: 0;
     }
     /** DETERMINA QUAL LOGO DEVE APARECE E CONFIGURA TAMANHO DA BARRA SUPERIOR DE ACORDO COM A LOGO **/
@@ -506,7 +510,7 @@ body.sidenav-toggled .navbar-sidenav .nav-item:after, body.sidenav-toggled .navb
         list-style: none;
     }
     #mainNav .navbar-collapse .navbar-sidenav>.nav-item .sidenav-second-level>li, #mainNav .navbar-collapse .navbar-sidenav>.nav-item .sidenav-third-level>li {
-        width: 250px;
+        width: 230px;
     }
     #mainNav .navbar-collapse .navbar-sidenav>.nav-item .sidenav-second-level>li>a, #mainNav .navbar-collapse .navbar-sidenav>.nav-item .sidenav-third-level>li>a {
         padding: 1em;
@@ -630,7 +634,7 @@ body.sidenav-toggled .navbar-sidenav .nav-item:after, body.sidenav-toggled .navb
         margin-top: calc(100vh - 75px);
     }
     #mainNav.fixed-top .sidenav-toggler>.nav-item {
-        width: 250px;
+        width: 230px;
         padding: 0;
     }
     #mainNav.fixed-top .sidenav-toggler>.nav-item>.nav-link {
