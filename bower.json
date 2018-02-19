@@ -19,6 +19,7 @@
     "angular-ui-router": "^1.0.12",
     "angularfire": "^2.3.0",
     "ng-dialog": "^1.4.0",
-    "angular-tooltips": "^1.2.2"
+    "angular-tooltips": "^1.2.2",
+    "angular-loading-bar": "^0.9.0"
   }
 }
