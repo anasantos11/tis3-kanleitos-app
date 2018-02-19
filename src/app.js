@@ -14,6 +14,8 @@ var isLogado = false;
 var app = angular.module("kanleitos", [
 	'firebase',
 	'ui.router',
+	'angular-loading-bar',
+	'ngAnimate',
 	"ngDialog",
 	"720kb.tooltips"]);
 
