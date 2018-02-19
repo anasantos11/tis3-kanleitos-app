@@ -20,7 +20,9 @@ var app = angular.module("kanleitos", [
 	"720kb.tooltips"]);
 
 
-
+app.config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
+	cfpLoadingBarProvider.includeSpinner = false;
+}])
 
 
 
